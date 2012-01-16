@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<img src="/images/seperator.png">
+  <title>The Community Blog - Totally Cool!</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</style>
+
+<script type="text/javascript">
+function placeIt() {
+if (!document.all) {
+document.getElementById("top_bar").style.top = window.pageYOffset +"px"; // For Mozilla etc.
+document.getElementById("loginbox").style.top = window.pageYOffset +"px"; // For Mozilla etc.
+} else {
+document.getElementById("top_bar").style.top = document.documentElement.scrollTop +"px"; // For the IE...
+document.getElementById("loginbox").style.top = document.documentElement.scrollTop +"px"; // For the IE...
+}
+
+}
+</script>
+  
+</div>
+</div>
+</head>
+
+<body onload="placeIt()">
+	
+	<div id="top_bar">
+  <div align=center>
+  <a href="http://69.146.56.54:3000/" target="_blank"><img src="/images/head.png"></a>
+
+</div>
+</div>
+	
+<%= yield %>
+
+</body>
+</html>
